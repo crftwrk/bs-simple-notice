@@ -16,8 +16,23 @@ License: MIT License
 defined( 'ABSPATH' ) || exit;
 
 
+/**
+ * Require the GitHub_Plugin_Updater class.
+ *
+ * Each of your plugins will require GitHub_Plugin_Updater to be loaded under a different namespace.
+ * Ideally use an autoloader, but for the sake of functionality we are using require_once here.
+ */
+require_once plugin_dir_path( __FILE__ ) . 'update/class-github-plugin-updater.php';
+use MyPlugin\GitHub_Plugin_Updater;
+( new GitHub_Plugin_Updater( plugin_basename( __FILE__ ), '1.0.0', 'https://api.github.com/crftwrk/bs-simple-notice' ) )->init();
+
+
+
+
 // Hook bs_after_primary content
 function my_function() {
   echo '<div class=""><p class="alert alert-info">bS Simple Notice v1.0.0</p></div>';
 }
 add_action('bs_after_primary', 'my_function', 5);
+
+
