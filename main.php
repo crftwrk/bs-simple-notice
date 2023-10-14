@@ -4,6 +4,7 @@ Plugin URI: https://bootscore.me/
 Description: Plugin adds a simple alert to bootScore theme and does nothing more. It is a testing plugin for auto-updates.  
 Version: 1.0.0
 Tested up to: 6.3.2
+Requires at least: 5.0
 Requires PHP: 7.4
 Author: bootScore
 Author URI: https://bootscore.me
