@@ -2,7 +2,7 @@
 /*Plugin Name: bS Simple Notice
 Plugin URI: https://bootscore.me/
 Description: Plugin adds a simple alert to bootScore theme and does nothing more. It is a testing plugin for auto-updates.  
-Version: 1.4.0
+Version: 1.5.0
 Tested up to: 6.3.2
 Requires at least: 5.0
 Requires PHP: 7.4
@@ -25,7 +25,7 @@ defined( 'ABSPATH' ) || exit;
  */
 require_once plugin_dir_path( __FILE__ ) . 'class-github-plugin-updater.php';
 use MyPlugin\GitHub_Plugin_Updater;
-( new GitHub_Plugin_Updater( plugin_basename( __FILE__ ), '1.4.0', 'https://api.github.com/repos/crftwrk/bs-simple-notice' ) )->init();
+( new GitHub_Plugin_Updater( plugin_basename( __FILE__ ), '1.5.0', 'https://api.github.com/repos/crftwrk/bs-simple-notice' ) )->init();
 
 
 /*
@@ -52,7 +52,7 @@ $myUpdateChecker->setBranch('main');
 
 // Hook bs_after_primary content
 function my_function() {
-  echo '<div class=""><p class="alert alert-info">bS Simple Notice has been updated to v1.4.0</p></div>';
+  echo '<div class=""><p class="alert alert-info">bS Simple Notice has been updated to v1.5.0</p></div>';
 }
 add_action('bs_after_primary', 'my_function', 5);
 
